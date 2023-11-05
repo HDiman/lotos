@@ -1,7 +1,7 @@
-DIV {
+div {
   background:
     repeating-linear-gradient(
-      transparent,transparent 100px, yellowgreen 102px
+      transparent,transparent 40px, yellowgreen 42px
     ),
     repeating-linear-gradient(
       90deg,
