@@ -1,3 +1,11 @@
+.box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+/*
 div {
   background:
     repeating-linear-gradient(
@@ -7,4 +15,4 @@ div {
       90deg,
       transparent,transparent 20px, yellowgreen 22px
     )
-}
+}*/

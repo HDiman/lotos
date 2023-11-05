@@ -6,28 +6,15 @@
     <link href="{% static 'main/css/main.css' %}" rel="stylesheet">
 </head>
 <body>
-<div id="content">
     {% block content %}
+        <div class="box">
+            <div>One</div>
+            <div>Two</div>
+            <div>Three</div>
+            <div>Four</div>
+        </div>
     {% endblock %}
 </div>
-<div class="container">
-    <div class="container__item"></div>
-    <div class="container__item"></div>
-    <div class="container__item"></div>
-    <div class="container__item"></div>
-    <div class="container__item"></div>
-</div>
-<div id="sidebar">
-    <p>1</p>
-    <p>2</p>
-    <p>3</p>
-    <p>4</p>
-    <p>5</p>
-    <p>1</p>
-    <p>2</p>
-    <p>3</p>
-    <p>4</p>
-    <p>5</p>
-</div>
+
 </body>
 </html>
