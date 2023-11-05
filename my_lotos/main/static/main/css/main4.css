@@ -1,0 +1,16 @@
+.container {
+  padding: 2px;
+  border: 3px solid #464646;
+  background-color: #000;
+  padding-left: 35px;
+  padding-right: 35px;
+  text-align: justify;
+}
+
+.container__item {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 2px;
+  background-color: #464646;
+}
