@@ -1,0 +1,55 @@
+.grid-shadow:before,
+.grid-shadow:after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: -1px;
+  left: -1px;
+}
+
+.grid-shadow:before {
+  right: 0;
+  border-top: 1px solid steelblue;
+  box-shadow:
+    0 20px 0 steelblue,
+    0 40px 0 steelblue,
+    0 60px 0 steelblue,
+    0 80px 0 steelblue,
+    0 100px 0 steelblue,
+    0 120px 0 steelblue,
+    0 140px 0 steelblue,
+    0 160px 0 steelblue,
+    0 180px 0 steelblue,
+    0 200px 0 steelblue,
+    0 220px 0 steelblue;
+}
+.grid-shadow:after {
+  bottom: 0;
+  border-left: 1px solid steelblue;
+  box-shadow:
+    20px 0 0 steelblue,
+    40px 0 0 steelblue,
+    60px 0 0 steelblue,
+    80px 0 0 steelblue,
+    100px 0 0 steelblue,
+    120px 0 0 steelblue,
+    140px 0 0 steelblue,
+    160px 0 0 steelblue,
+    180px 0 0 steelblue,
+    200px 0 0 steelblue,
+    220px 0 0 steelblue,
+    240px 0 0 steelblue,
+    260px 0 0 steelblue,
+    280px 0 0 steelblue,
+    300px 0 0 steelblue,
+    320px 0 0 steelblue,
+    340px 0 0 steelblue,
+    360px 0 0 steelblue,
+    380px 0 0 steelblue,
+    400px 0 0 steelblue,
+    420px 0 0 steelblue,
+    440px 0 0 steelblue,
+    460px 0 0 steelblue,
+    480px 0 0 steelblue;
+}
