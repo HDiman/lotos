@@ -1,0 +1,10 @@
+DIV {
+  background:
+    repeating-linear-gradient(
+      transparent,transparent 20px, yellowgreen 22px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,transparent 20px, yellowgreen 22px
+    );
+}
