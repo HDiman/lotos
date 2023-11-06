@@ -1,4 +1,17 @@
-.themed-grid-col {
+.wrapper {
+  display: grid;
+  /*background-color: #8ca0ff;*/
+  border: solid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 100px);
+}
+
+.box {
+    border: solid;
+}
+
+
+/*.themed-grid-col {
   padding-top: .75rem;
   padding-bottom: .75rem;
   background-color: rgba(112.520718, 44.062154, 249.437846, .15);
@@ -10,4 +23,4 @@
   margin-bottom: 1.5rem;
   background-color: rgba(112.520718, 44.062154, 249.437846, .15);
   border: 1px solid rgba(112.520718, 44.062154, 249.437846, .3);
-}
+}*/
