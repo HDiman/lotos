@@ -3,7 +3,7 @@
   /*background-color: #8ca0ff;*/
   border: solid;
   grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: repeat(9, 100px);
+  grid-template-rows: repeat(9, 77px);
 }
 
 .box {
