@@ -1,6 +1,6 @@
 .wrapper {
   display: grid;
-
+  text-align: center;
   border: solid;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(9, 77px);
