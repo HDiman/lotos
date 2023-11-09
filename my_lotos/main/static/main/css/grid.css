@@ -6,5 +6,15 @@
     grid-template-rows: repeat(9, 77px);
 }
 
+.box {
+    border: solid;
+}
 
+.clr {
+    background-color: Yellow;
+}
+
+.mid_clr {
+    background-color: GreenYellow;
+}
 
