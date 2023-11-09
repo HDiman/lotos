@@ -4,4 +4,10 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'main/index.html')
+
+    data = {
+        'item5_0': 'Калининград',
+
+    }
+
+    return render(request, 'main/index.html', context=data)
