@@ -95,9 +95,6 @@ def index(request):
         'item9_6': 'item9_6',
         'item9_7': 'item9_7',
         'item9_8': 'item9_8',
-
-
-
     }
 
     return render(request, 'main/index.html', context=data)
