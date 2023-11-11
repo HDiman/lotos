@@ -1,47 +1,47 @@
-from dataclasses import dataclass
 
 
 
-item = ['Здоровье', 'item1_1', 'item1_2', 'item1_3', 'item1_4', 'item1_5', 'item1_6', 'item1_7', 'item1_8',
-        'Достависта', 'item2_1', 'item2_2', 'item2_3', 'item2_4', 'item2_5', 'item2_6', 'item2_7', 'item2_8',
-        'Профи', 'Поиск заказов', 'Переписка', 'Продажа', 'Ремонт', 'Инструмент', 'Запчасти', 'item3_7', 'item3_8',
-        'Питание', 'item4_1', 'item4_2', 'item4_3', 'item4_4', 'item4_5', 'item4_6', 'item4_7', 'item4_8',
-        'Москва', 'Профи', 'Сарафан', 'Кодинг', 'Обучение', 'Планирование', 'Питание', 'Здоровье', 'Достависта',
-        'Сарафан', 'item6_1', 'item6_2', 'item6_3', 'item6_4', 'item6_5', 'item6_6', 'item6_7', 'item6_8',
-        'Планирование', 'item7_1', 'item7_2', 'item7_3', 'item7_4', 'item7_5', 'item7_6', 'item7_7', 'item7_8',
-        'Обучение', 'item8_1', 'item8_2', 'item8_3', 'item8_4', 'item8_5', 'item8_6', 'item8_7', 'item8_8',
-        'Кодинг', 'item9_1', 'item9_2', 'item9_3', 'item9_4', 'item9_5', 'item9_6', 'item9_7', 'item9_8',]
+
+item = {1: ['Здоровье', 'item1_1', 'item1_2', 'item1_3', 'item1_4', 'item1_5', 'item1_6', 'item1_7', 'item1_8',],
+        2: ['Достависта', 'item2_1', 'item2_2', 'item2_3', 'item2_4', 'item2_5', 'item2_6', 'item2_7', 'item2_8',],
+        3: ['Профи', 'Поиск заказов', 'Переписка', 'Продажа', 'Ремонт', 'Инструмент', 'Запчасти', 'item3_7', 'item3_8',],
+        4: ['Питание', 'item4_1', 'item4_2', 'item4_3', 'item4_4', 'item4_5', 'item4_6', 'item4_7', 'item4_8',],
+        5: ['Москва', 'Профи', 'Сарафан', 'Кодинг', 'Обучение', 'Планирование', 'Питание', 'Здоровье', 'Достависта',],
+        6: ['Сарафан', 'item6_1', 'item6_2', 'item6_3', 'item6_4', 'item6_5', 'item6_6', 'item6_7', 'item6_8',],
+        7: ['Планирование', 'item7_1', 'item7_2', 'item7_3', 'item7_4', 'item7_5', 'item7_6', 'item7_7', 'item7_8',],
+        8: ['Обучение', 'item8_1', 'item8_2', 'item8_3', 'item8_4', 'item8_5', 'item8_6', 'item8_7', 'item8_8',],
+        9: ['Кодинг', 'item9_1', 'item9_2', 'item9_3', 'item9_4', 'item9_5', 'item9_6', 'item9_7', 'item9_8',],
+        }
 
 
-for i in range(9, 18):
-    item[i] = i
+
 
 
 
 
 data = {
-    'item1_0': item[0],
-    'item1_1': item[1],
-    'item1_2': item[2],
-    'item1_3': item[3],
-    'item1_4': item[4],
-    'item1_5': item[5],
-    'item1_6': item[6],
-    'item1_7': item[7],
-    'item1_8': item[8],
+    'item1_0': item[1][0],
+    'item1_1': item[1][1],
+    'item1_2': item[1][2],
+    'item1_3': item[1][3],
+    'item1_4': item[1][4],
+    'item1_5': item[1][5],
+    'item1_6': item[1][6],
+    'item1_7': item[1][7],
+    'item1_8': item[1][8],
 
-    'item2_0': item[9],
-    'item2_1': item[10],
-    'item2_2': item[11],
-    'item2_3': item[12],
-    'item2_4': item[13],
-    'item2_5': item[14],
-    'item2_6': item[15],
-    'item2_7': item[16],
-    'item2_8': item[17],
+    'item2_0': item[2][0],
+    'item2_1': item[2][1],
+    'item2_2': item[2][2],
+    'item2_3': item[2][3],
+    'item2_4': item[1][4],
+    'item2_5': item[1][5],
+    'item2_6': item[1][6],
+    'item2_7': item[1][7],
+    'item2_8': item[1][8],
 
-    'item3_0': item[18],
-    'item3_1': item[19],
+    'item3_0': item[2][0],
+    'item3_1': item[2][0],
     'item3_2': item[20],
     'item3_3': item[21],
     'item3_4': item[22],
