@@ -13,25 +13,23 @@ item = {1: ['Здоровье', 'item1_1', 'item1_2', 'item1_3', 'item1_4', 'ite
         9: ['Кодинг', 'item9_1', 'item9_2', 'item9_3', 'item9_4', 'item9_5', 'item9_6', 'item9_7', 'item9_8',],
         }
 
-
-item_copy = copy.deepcopy(item)
-for i in item:
-    for j in range(9):
-        item_copy[i][j] = 'text'
-
-item_copy[5] = item[3]
-item_copy[3][0] = item_copy[5][1]
-item_copy[6][0] = item_copy[5][2]
-item_copy[9][0] = item_copy[5][3]
-item_copy[8][0] = item_copy[5][4]
-item_copy[7][0] = item_copy[5][5]
-item_copy[4][0] = item_copy[5][6]
-item_copy[1][0] = item_copy[5][7]
-item_copy[2][0] = item_copy[5][8]
-
-
-
-item = copy.deepcopy(item_copy)
+# Пересчитать счет блоков по аналогии с центром
+# item_copy = copy.deepcopy(item)
+# for i in item:
+#     for j in range(9):
+#         item_copy[i][j] = 'text'
+#
+# item_copy[5] = item[3]
+# item_copy[3][0] = item_copy[5][1]
+# item_copy[6][0] = item_copy[5][2]
+# item_copy[9][0] = item_copy[5][3]
+# item_copy[8][0] = item_copy[5][4]
+# item_copy[7][0] = item_copy[5][5]
+# item_copy[4][0] = item_copy[5][6]
+# item_copy[1][0] = item_copy[5][7]
+# item_copy[2][0] = item_copy[5][8]
+#
+# item = copy.deepcopy(item_copy)
 
 
 data = {
