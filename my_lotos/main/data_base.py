@@ -13,23 +13,23 @@ item = {0: ['Москва', 'Профи', 'Сарафан', 'Кодинг', 'О�
         8: ['Достависта', 'item8_1', 'item8_2', 'item8_3', 'item8_4', 'item8_5', 'item8_6', 'item8_7', 'item8_8',],
         }
 
-# Переход листка в центр
-item_copy = copy.deepcopy(item)
-for i in item:
-    for j in range(9):
-        item_copy[i][j] = ''
-
-item_copy[0] = item[1]
-item_copy[1][0] = item_copy[0][1]
-item_copy[2][0] = item_copy[0][2]
-item_copy[3][0] = item_copy[0][3]
-item_copy[4][0] = item_copy[0][4]
-item_copy[5][0] = item_copy[0][5]
-item_copy[6][0] = item_copy[0][6]
-item_copy[7][0] = item_copy[0][7]
-item_copy[8][0] = item_copy[0][8]
-
-item = copy.deepcopy(item_copy)
+# # Переход листка в центр
+# item_copy = copy.deepcopy(item)
+# for i in item:
+#     for j in range(9):
+#         item_copy[i][j] = ''
+#
+# item_copy[0] = item[1]
+# item_copy[1][0] = item_copy[0][1]
+# item_copy[2][0] = item_copy[0][2]
+# item_copy[3][0] = item_copy[0][3]
+# item_copy[4][0] = item_copy[0][4]
+# item_copy[5][0] = item_copy[0][5]
+# item_copy[6][0] = item_copy[0][6]
+# item_copy[7][0] = item_copy[0][7]
+# item_copy[8][0] = item_copy[0][8]
+#
+# item = copy.deepcopy(item_copy)
 
 
 data = {
