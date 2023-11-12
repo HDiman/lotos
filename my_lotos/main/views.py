@@ -12,9 +12,11 @@ grid_6 = Grid.objects.all()[6]
 grid_7 = Grid.objects.all()[7]
 grid_8 = Grid.objects.all()[8]
 
+cells = ['item_0', 'item_1', 'item_2', 'item_3', 'item_4', 'item_5', 'item_6', 'item_7','item_8',]
 
 def rlc_1(request):
-
+    grid_8.item_0 = 'New_Text'
+    grid_8.save()
     return redirect('home')
 
 
