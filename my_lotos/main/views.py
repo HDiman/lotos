@@ -3,10 +3,12 @@ from django.shortcuts import render, redirect
 import copy
 
 
-#
-# # Блок по автоматизации процесса
-# def auto_btn(request):
-#     return redirect('home')
+r = 1
+
+def rlc_1(request):
+    return redirect('home')
+
+
 
 def index(request):
 
@@ -41,7 +43,8 @@ def index(request):
             8: ['Достависта', 'item8_1', 'item8_2', 'item8_3', 'item8_4', 'item8_5', 'item8_6', 'item8_7', 'item8_8',],
             }
 
-    item = replace(item, 1)
+    if r == 1:
+        item = replace(item, 1)
 
 
     data = {
@@ -135,7 +138,5 @@ def index(request):
         'item8_7': item[8][7],
         'item8_8': item[8][8],
     }
-
-
 
     return render(request, 'main/index.html', context=data)
