@@ -34,10 +34,9 @@ def replace(item_0, n):
     return item_0
 
 
-
-num = int(input('Выберите блок: '))
-item = replace(item, num)
-
+# Сделать ссылки выбора через клик и возврат обратно если нужно
+# num = int(input('Выберите блок: '))
+# item = replace(item, num)
 
 
 data = {
