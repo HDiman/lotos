@@ -13,29 +13,49 @@ grid_7 = Grid.objects.all()[7]
 grid_8 = Grid.objects.all()[8]
 
 item = {0: ['Москва', 'Профи', 'Сарафан', 'Кодинг', 'Обучение', 'Планирование', 'Питание', 'Здоровье', 'Достависта',],
-        1: ['Профи', 'Поиск заказов', 'Переписка', 'Продажа', 'Ремонт', 'Инструмент', 'Запчасти', 'item1_7', 'item1_8',],
-        2: ['Сарафан', 'item2_1', 'item2_2', 'item2_3', 'item2_4', 'item2_5', 'item2_6', 'item2_7', 'item2_8',],
-        3: ['Кодинг', 'item3_1', 'item3_2', 'item3_3', 'item3_4', 'item3_5', 'item3_6', 'item3_7', 'item3_8',],
-        4: ['Обучение', 'item4_1', 'item4_2', 'item4_3', 'item4_4', 'item4_5', 'item4_6', 'item4_7', 'item4_8',],
-        5: ['Планирование', 'item5_1', 'item5_2', 'item5_3', 'item5_4', 'item5_5', 'item5_6', 'item5_7', 'item5_8',],
-        6: ['Питание', 'item6_1', 'item6_2', 'item6_3', 'item6_4', 'item6_5', 'item6_6', 'item6_7', 'item6_8',],
-        7: ['Здоровье', 'item7_1', 'item7_2', 'item7_3', 'item7_4', 'item7_5', 'item7_6', 'item7_7', 'item7_8',],
-        8: ['Достависта', 'item8_1', 'item8_2', 'item8_3', 'item8_4', 'item8_5', 'item8_6', 'item8_7', 'item8_8',],
+        1: ['Профи', 'Поиск заказов', 'Переписка', 'Продажа', 'Ремонт', 'Инструмент', 'Запчасти', '-', '-',],
+        2: ['Сарафан', '-', '-', '-', '-', '-', '-', '-', '-',],
+        3: ['Кодинг', '-', '-', '-', '-', '-', '-', '-', '-',],
+        4: ['Обучение', '-', '-', '-', '-', '-', '-', '-', '-',],
+        5: ['Планирование', '-', '-', '-', '-', '-', '-', '-', '-',],
+        6: ['Питание', '-', '-', '-', '-', '-', '-', '-', '-',],
+        7: ['Здоровье', '-', '-', '-', '-', '-', '-', '-', '-',],
+        8: ['Достависта', '-', '-', '-', '-', '-', '-', '-', '-',],
         }
 
-
+item1 = {0: ['Профи', 'Поиск заказов', 'Переписка', 'Продажа', 'Ремонт', 'Инструмент', 'Запчасти', '-', '-',],
+         1: ['Поиск заказов', '-', '-', '-', '-', '-', '-', '-', '-',],
+         2: ['Переписка', '-', '-', '-', '-', '-', '-', '-', '-',],
+         3: ['Продажа', '-', '-', '-', '-', '-', '-', '-', '-',],
+         4: ['Ремонт', '-', '-', '-', '-', '-', '-', '-', '-',],
+         5: ['Инструмент', '-', '-', '-', '-', '-', '-', '-', '-',],
+         6: ['Запчасти', '-', '-', '-', '-', '-', '-', '-', '-',],
+         7: ['item1_7', '-', '-', '-', '-', '-', '-', '-', '-',],
+         8: ['item1_8', '-', '-', '-', '-', '-', '-', '-', '-',],
+         }
 
 def rlc_1(request):
     for j in range(9):
-        globals()['grid_%s' % j].item_0 = 'text'
-        globals()['grid_%s' % j].item_1 = 'text'
-        globals()['grid_%s' % j].item_2 = 'text'
-        globals()['grid_%s' % j].item_3 = 'text'
-        globals()['grid_%s' % j].item_4 = 'text'
-        globals()['grid_%s' % j].item_5 = 'text'
-        globals()['grid_%s' % j].item_6 = 'text'
-        globals()['grid_%s' % j].item_7 = 'text'
-        globals()['grid_%s' % j].item_8 = 'text'
+        globals()['grid_%s' % j].item_0 = '-'
+        globals()['grid_%s' % j].item_1 = '-'
+        globals()['grid_%s' % j].item_2 = '-'
+        globals()['grid_%s' % j].item_3 = '-'
+        globals()['grid_%s' % j].item_4 = '-'
+        globals()['grid_%s' % j].item_5 = '-'
+        globals()['grid_%s' % j].item_6 = '-'
+        globals()['grid_%s' % j].item_7 = '-'
+        globals()['grid_%s' % j].item_8 = '-'
+
+    for j in range(9):
+        globals()['grid_%s' % j].item_0 = item1[j][0]
+        globals()['grid_%s' % j].item_1 = item1[j][1]
+        globals()['grid_%s' % j].item_2 = item1[j][2]
+        globals()['grid_%s' % j].item_3 = item1[j][3]
+        globals()['grid_%s' % j].item_4 = item1[j][4]
+        globals()['grid_%s' % j].item_5 = item1[j][5]
+        globals()['grid_%s' % j].item_6 = item1[j][6]
+        globals()['grid_%s' % j].item_7 = item1[j][7]
+        globals()['grid_%s' % j].item_8 = item1[j][8]
 
     for i in range(9):
         globals()['grid_%s' % i].save()
@@ -46,16 +66,15 @@ def rlc_1(request):
 # написать код по возврату к изначальному виду
 def rlc_0(request):
     for j in range(9):
-        for i in range(9):
-            globals()['grid_%s' % j].item_0 = item[j][0]
-            globals()['grid_%s' % j].item_1 = item[j][1]
-            globals()['grid_%s' % j].item_2 = item[j][2]
-            globals()['grid_%s' % j].item_3 = item[j][3]
-            globals()['grid_%s' % j].item_4 = item[j][4]
-            globals()['grid_%s' % j].item_5 = item[j][5]
-            globals()['grid_%s' % j].item_6 = item[j][6]
-            globals()['grid_%s' % j].item_7 = item[j][7]
-            globals()['grid_%s' % j].item_8 = item[j][8]
+        globals()['grid_%s' % j].item_0 = item[j][0]
+        globals()['grid_%s' % j].item_1 = item[j][1]
+        globals()['grid_%s' % j].item_2 = item[j][2]
+        globals()['grid_%s' % j].item_3 = item[j][3]
+        globals()['grid_%s' % j].item_4 = item[j][4]
+        globals()['grid_%s' % j].item_5 = item[j][5]
+        globals()['grid_%s' % j].item_6 = item[j][6]
+        globals()['grid_%s' % j].item_7 = item[j][7]
+        globals()['grid_%s' % j].item_8 = item[j][8]
 
     for i in range(9):
         globals()['grid_%s' % i].save()
