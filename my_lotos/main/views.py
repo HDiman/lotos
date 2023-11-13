@@ -42,19 +42,20 @@ def rlc_1(request):
 
     return redirect('home')
 
+
 # написать код по возврату к изначальному виду
 def rlc_0(request):
     for j in range(9):
         for i in range(9):
-            globals()['grid_%s' % j].item_0 = item[j][i]
-            globals()['grid_%s' % j].item_1 = item[j][i]
-            globals()['grid_%s' % j].item_2 = item[j][i]
-            globals()['grid_%s' % j].item_3 = item[j][i]
-            globals()['grid_%s' % j].item_4 = item[j][i]
-            globals()['grid_%s' % j].item_5 = item[j][i]
-            globals()['grid_%s' % j].item_6 = item[j][i]
-            globals()['grid_%s' % j].item_7 = item[j][i]
-            globals()['grid_%s' % j].item_8 = item[j][i]
+            globals()['grid_%s' % j].item_0 = item[j][0]
+            globals()['grid_%s' % j].item_1 = item[j][1]
+            globals()['grid_%s' % j].item_2 = item[j][2]
+            globals()['grid_%s' % j].item_3 = item[j][3]
+            globals()['grid_%s' % j].item_4 = item[j][4]
+            globals()['grid_%s' % j].item_5 = item[j][5]
+            globals()['grid_%s' % j].item_6 = item[j][6]
+            globals()['grid_%s' % j].item_7 = item[j][7]
+            globals()['grid_%s' % j].item_8 = item[j][8]
 
     for i in range(9):
         globals()['grid_%s' % i].save()
