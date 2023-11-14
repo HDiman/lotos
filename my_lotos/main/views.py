@@ -12,7 +12,7 @@ grid_6 = Grid.objects.all()[6]
 grid_7 = Grid.objects.all()[7]
 grid_8 = Grid.objects.all()[8]
 
-second = Grid.objects.using('second_db').all()[0]
+second = Grid.objects.using('second_db').all()[8]
 
 
 item = {0: ['Москва', 'Профи', 'Сарафан', 'Кодинг', 'Обучение', 'Планирование', 'Питание', 'Здоровье', 'Достависта',],
@@ -73,7 +73,7 @@ def rlc_1(request):
     second.item_7 = 'text'
     second.item_8 = 'text'
 
-    second.save()
+    second.save(using="second_db")
 
 
     return redirect('home')
