@@ -3,7 +3,6 @@ from django.shortcuts import render, redirect
 from .models import Grid
 
 
-
 # сохранение данных в бд
 def create(request):
     if request.method == 'POST':
@@ -21,9 +20,9 @@ def create(request):
     return redirect('home')
 
 
-# изменение данных в grid_2
-def edit_2(request):
-    grid = Grid.objects.get(id=6)
+# изменение данных
+def change(request):
+    grid = Grid.objects.get(id=3)
     if request.method == 'POST':
         grid.item_0 = request.POST.get('item_0')
         grid.item_1 = request.POST.get('item_1')
