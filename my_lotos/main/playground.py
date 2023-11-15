@@ -63,6 +63,18 @@ def rlc_1(request):
         for i in range(9):
                 globals()['grid_%s' % i].save()
 
+        # second.item_0 = 'Django'
+        # second.item_1 = 'инструкции'
+        # second.item_2 = 'проекты'
+        # second.item_3 = 'text'
+        # second.item_4 = 'text'
+        # second.item_5 = 'text'
+        # second.item_6 = 'text'
+        # second.item_7 = 'text'
+        # second.item_8 = 'text'
+        #
+        # second.save(using="second_db")
+
         return redirect('home')
 
 

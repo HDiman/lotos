@@ -2,10 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lotos</title>
+    <title>Edit</title>
     <link href="{% static 'main/css/grid.css' %}" rel="stylesheet">
 </head>
 <body>
+<form method="POST" action="edit_2">
+    {% csrf_token %}
     <div class="wrapper">
         <div class="box box1">{{item7_7}}</div>
         <div class="box box1">{{item7_8}}</div>
@@ -40,27 +42,45 @@
         <div class="box mid_clr">{{item0_7}}</div>
         <div class="box mid_clr">{{item0_8}}</div>
         <div class="box mid_clr">{{item0_1}}</div>
-        <div class="box box6">{{item2_7}}</div>
-        <div class="box box6">{{item2_8}}</div>
-        <div class="box box6">{{item2_1}}</div>
+        <div class="box box6">{{item2_7}}
+            <input type="text" name="item_7" />
+        </div>
+        <div class="box box6">{{item2_8}}
+            <input type="text" name="item_8" />
+        </div>
+        <div class="box box6">{{item2_1}}
+            <input type="text" name="item_1" />
+        </div>
         <div class="box box4">{{item6_6}}</div>
         <div class="box clr">{{item6_0}}</div>
         <div class="box box4">{{item6_2}}</div>
         <div class="box mid_clr">{{item0_6}}</div>
-        <div class="box clr">{{item0_0}}-{{grid_0_id}}</div>
+        <div class="box clr">{{item0_0}}</div>
         <div class="box mid_clr">{{item0_2}}</div>
-        <div class="box box6">{{item2_6}}</div>
-        <div class="box clr">{{item2_0}}-{{grid_2_id}}</div>
-        <div class="box box6">{{item2_2}}</div>
+        <div class="box box6">{{item2_6}}
+            <input type="text" name="item_6" />
+        </div>
+        <div class="box clr">{{item2_0}}
+            <input type="text" name="item_0" />
+        </div>
+        <div class="box box6">{{item2_2}}
+            <input type="text" name="item_2" />
+        </div>
         <div class="box box4">{{item6_5}}</div>
         <div class="box box4">{{item6_4}}</div>
         <div class="box box4">{{item6_3}}</div>
         <div class="box mid_clr">{{item0_5}}</div>
         <div class="box mid_clr">{{item0_4}}</div>
         <div class="box mid_clr">{{item0_3}}</div>
-        <div class="box box6">{{item2_5}}</div>
-        <div class="box box6">{{item2_4}}</div>
-        <div class="box box6">{{item2_3}}</div>
+        <div class="box box6">{{item2_5}}
+            <input type="text" name="item_5" />
+        </div>
+        <div class="box box6">{{item2_4}}
+            <input type="text" name="item_4" />
+        </div>
+        <div class="box box6">{{item2_3}}
+            <input type="text" name="item_3" />
+        </div>
         <div class="box box7">{{item5_7}}</div>
         <div class="box box7">{{item5_8}}</div>
         <div class="box box7">{{item5_1}}</div>
@@ -89,7 +109,7 @@
         <div class="box box9">{{item3_4}}</div>
         <div class="box box9">{{item3_3}}</div>
     </div>
-    <a href="edit">Изменить</a>
-    <a href="list">Список</a>
+    <input type="submit" value="Сохранить" >
+</form>
 </body>
 </html>
