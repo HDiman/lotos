@@ -12,7 +12,7 @@ grid_6 = Grid.objects.all()[6]
 grid_7 = Grid.objects.all()[7]
 grid_8 = Grid.objects.all()[8]
 
-second = Grid.objects.using('second_db').all()[8]
+# second = Grid.objects.using('second_db').all()[8]
 
 
 item = {0: ['Москва', 'Профи', 'Сарафан', 'Кодинг', 'Обучение', 'Планирование', 'Питание', 'Здоровье', 'Достависта',],
@@ -38,42 +38,42 @@ item1 = {0: ['Профи', 'Поиск заказов', 'Переписка', '�
          }
 
 def rlc_1(request):
-    # for j in range(9):
-    #     globals()['grid_%s' % j].item_0 = '-'
-    #     globals()['grid_%s' % j].item_1 = '-'
-    #     globals()['grid_%s' % j].item_2 = '-'
-    #     globals()['grid_%s' % j].item_3 = '-'
-    #     globals()['grid_%s' % j].item_4 = '-'
-    #     globals()['grid_%s' % j].item_5 = '-'
-    #     globals()['grid_%s' % j].item_6 = '-'
-    #     globals()['grid_%s' % j].item_7 = '-'
-    #     globals()['grid_%s' % j].item_8 = '-'
-    #
-    # for j in range(9):
-    #     globals()['grid_%s' % j].item_0 = item1[j][0]
-    #     globals()['grid_%s' % j].item_1 = item1[j][1]
-    #     globals()['grid_%s' % j].item_2 = item1[j][2]
-    #     globals()['grid_%s' % j].item_3 = item1[j][3]
-    #     globals()['grid_%s' % j].item_4 = item1[j][4]
-    #     globals()['grid_%s' % j].item_5 = item1[j][5]
-    #     globals()['grid_%s' % j].item_6 = item1[j][6]
-    #     globals()['grid_%s' % j].item_7 = item1[j][7]
-    #     globals()['grid_%s' % j].item_8 = item1[j][8]
-    #
-    # for i in range(9):
-    #     globals()['grid_%s' % i].save()
+    for j in range(9):
+        globals()['grid_%s' % j].item_0 = '-'
+        globals()['grid_%s' % j].item_1 = '-'
+        globals()['grid_%s' % j].item_2 = '-'
+        globals()['grid_%s' % j].item_3 = '-'
+        globals()['grid_%s' % j].item_4 = '-'
+        globals()['grid_%s' % j].item_5 = '-'
+        globals()['grid_%s' % j].item_6 = '-'
+        globals()['grid_%s' % j].item_7 = '-'
+        globals()['grid_%s' % j].item_8 = '-'
 
-    second.item_0 = 'Django'
-    second.item_1 = 'инструкции'
-    second.item_2 = 'проекты'
-    second.item_3 = 'text'
-    second.item_4 = 'text'
-    second.item_5 = 'text'
-    second.item_6 = 'text'
-    second.item_7 = 'text'
-    second.item_8 = 'text'
+    for j in range(9):
+        globals()['grid_%s' % j].item_0 = item1[j][0]
+        globals()['grid_%s' % j].item_1 = item1[j][1]
+        globals()['grid_%s' % j].item_2 = item1[j][2]
+        globals()['grid_%s' % j].item_3 = item1[j][3]
+        globals()['grid_%s' % j].item_4 = item1[j][4]
+        globals()['grid_%s' % j].item_5 = item1[j][5]
+        globals()['grid_%s' % j].item_6 = item1[j][6]
+        globals()['grid_%s' % j].item_7 = item1[j][7]
+        globals()['grid_%s' % j].item_8 = item1[j][8]
 
-    second.save(using="second_db")
+    for i in range(9):
+        globals()['grid_%s' % i].save()
+
+    # second.item_0 = 'Django'
+    # second.item_1 = 'инструкции'
+    # second.item_2 = 'проекты'
+    # second.item_3 = 'text'
+    # second.item_4 = 'text'
+    # second.item_5 = 'text'
+    # second.item_6 = 'text'
+    # second.item_7 = 'text'
+    # second.item_8 = 'text'
+    #
+    # second.save(using="second_db")
 
 
     return redirect('home')
