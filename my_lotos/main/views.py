@@ -2,18 +2,6 @@ from django.shortcuts import render, redirect
 # from .data_base import data
 from .models import Grid
 
-grid_0 = Grid.objects.all()[0]
-grid_1 = Grid.objects.all()[1]
-grid_2 = Grid.objects.all()[2]
-grid_3 = Grid.objects.all()[3]
-grid_4 = Grid.objects.all()[4]
-grid_5 = Grid.objects.all()[5]
-grid_6 = Grid.objects.all()[6]
-grid_7 = Grid.objects.all()[7]
-grid_8 = Grid.objects.all()[8]
-
-grid_0_id = Grid.objects.all()[0].id
-grid_2_id = Grid.objects.all()[2].id
 
 
 # сохранение данных в бд
@@ -32,9 +20,10 @@ def create(request):
         grid.save()
     return redirect('home')
 
+
 # изменение данных в grid_2
 def edit_2(request):
-    grid = Grid.objects.get(id=3)
+    grid = Grid.objects.get(id=6)
     if request.method == 'POST':
         grid.item_0 = request.POST.get('item_0')
         grid.item_1 = request.POST.get('item_1')
@@ -56,9 +45,18 @@ def list(request):
     return render(request, 'main/list.html', context=data)
 
 
-
 # изменение данных в бд
 def edit(request):
+    grid_0 = Grid.objects.all()[0]
+    grid_1 = Grid.objects.all()[1]
+    grid_2 = Grid.objects.all()[2]
+    grid_3 = Grid.objects.all()[3]
+    grid_4 = Grid.objects.all()[4]
+    grid_5 = Grid.objects.all()[5]
+    grid_6 = Grid.objects.all()[6]
+    grid_7 = Grid.objects.all()[7]
+    grid_8 = Grid.objects.all()[8]
+
     data = {
         'item0_0': grid_0.item_0,
         'item0_1': grid_0.item_1,
@@ -154,8 +152,17 @@ def edit(request):
 
 
 def index(request):
+    grid_0 = Grid.objects.all()[0]
+    grid_1 = Grid.objects.all()[1]
+    grid_2 = Grid.objects.all()[2]
+    grid_3 = Grid.objects.all()[3]
+    grid_4 = Grid.objects.all()[4]
+    grid_5 = Grid.objects.all()[5]
+    grid_6 = Grid.objects.all()[6]
+    grid_7 = Grid.objects.all()[7]
+    grid_8 = Grid.objects.all()[8]
+
     data = {
-        'grid_0_id': grid_0_id,
         'item0_0': grid_0.item_0,
         'item0_1': grid_0.item_1,
         'item0_2': grid_0.item_2,
@@ -176,7 +183,6 @@ def index(request):
         'item1_7': grid_1.item_7,
         'item1_8': grid_1.item_8,
 
-        'grid_2_id': grid_2_id,
         'item2_0': grid_2.item_0,
         'item2_1': grid_2.item_1,
         'item2_2': grid_2.item_2,
