@@ -23,6 +23,7 @@ def edit(request, id):
     grid_8 = Grid.objects.all()[8]
 
     data = {
+        'id': id,
         'item0_0': grid_0.item_0,
         'item0_1': grid_0.item_1,
         'item0_2': grid_0.item_2,
