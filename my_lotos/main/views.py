@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-# from .data_base import data
 from .models import Grid
 
 
