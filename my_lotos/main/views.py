@@ -4,7 +4,7 @@ from .models import Grid
 
 
 
-# изменение данных в grid
+# список данных в grid
 def list(request):
     grid = Grid.objects.all()
     data = {"grid": grid}
