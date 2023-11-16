@@ -3,22 +3,6 @@ from django.shortcuts import render, redirect
 from .models import Grid
 
 
-# сохранение данных в бд
-def create(request):
-    if request.method == 'POST':
-        grid = Grid()
-        grid.item_0 = request.POST.get('item_0')
-        grid.item_1 = request.POST.get('item_1')
-        grid.item_2 = request.POST.get('item_2')
-        grid.item_3 = request.POST.get('item_3')
-        grid.item_4 = request.POST.get('item_4')
-        grid.item_5 = request.POST.get('item_5')
-        grid.item_6 = request.POST.get('item_6')
-        grid.item_7 = request.POST.get('item_7')
-        grid.item_8 = request.POST.get('item_8')
-        grid.save()
-    return redirect('home')
-
 
 # изменение данных
 def change(request):
@@ -147,7 +131,10 @@ def edit(request):
         'item8_7': grid_8.item_7,
         'item8_8': grid_8.item_8,
     }
+    # if id == 3:
     return render(request, 'main/edit.html', context=data)
+    # else:
+    #     return redirect('home')
 
 
 def index(request):
