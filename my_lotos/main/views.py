@@ -26,6 +26,7 @@ def edit(request, id):
         return redirect('home')
     else:
         data = {
+            'id': id,
             'grid_0': Grid.objects.all()[0],
             'grid_1': Grid.objects.all()[1],
             'grid_2': Grid.objects.all()[2],
