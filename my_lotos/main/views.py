@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Grid
+from .forms import UserForms
 
 
 # список данных в grid
@@ -13,16 +14,18 @@ def list(request):
 def edit(request, id):
     grid = Grid.objects.get(id=id)
     if request.method == 'POST':
-        grid.item_0 = request.POST.get('item_0')
-        grid.item_1 = request.POST.get('item_1')
-        grid.item_2 = request.POST.get('item_2')
-        grid.item_3 = request.POST.get('item_3')
-        grid.item_4 = request.POST.get('item_4')
-        grid.item_5 = request.POST.get('item_5')
-        grid.item_6 = request.POST.get('item_6')
-        grid.item_7 = request.POST.get('item_7')
-        grid.item_8 = request.POST.get('item_8')
-        grid.save()
+        form = UserForms(request.POST)
+        if form.is_valid():
+            grid.item_0 = form.cleaned_data['item_0']
+            grid.item_1 = form.cleaned_data['item_1']
+            grid.item_2 = form.cleaned_data['item_2']
+            grid.item_3 = form.cleaned_data['item_3']
+            grid.item_4 = form.cleaned_data['item_4']
+            grid.item_5 = form.cleaned_data['item_5']
+            grid.item_6 = form.cleaned_data['item_6']
+            grid.item_7 = form.cleaned_data['item_7']
+            grid.item_8 = form.cleaned_data['item_8']
+            grid.save()
         return redirect('home')
     else:
         data = {
