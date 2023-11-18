@@ -1,11 +1,10 @@
 from django.shortcuts import render, redirect
 from .models import Grid
-from .forms import UserForms
-
 
 def edit(request, id):
     grid = Grid.objects.get(id=id)
     if request.method == 'POST':
+        form = request.POST
         userform_0 = request.POST.get('item_0')
         userform_1 = request.POST.get('item_1')
         userform_2 = request.POST.get('item_2')

@@ -32,20 +32,20 @@ def edit(request, id):
                 grid.item_8 = userform_8
         grid.save()
         return redirect('home')
-else:
-data = {
-        'id': id,
-        'grid_0': Grid.objects.all()[0],
-        'grid_1': Grid.objects.all()[1],
-        'grid_2': Grid.objects.all()[2],
-        'grid_3': Grid.objects.all()[3],
-        'grid_4': Grid.objects.all()[4],
-        'grid_5': Grid.objects.all()[5],
-        'grid_6': Grid.objects.all()[6],
-        'grid_7': Grid.objects.all()[7],
-        'grid_8': Grid.objects.all()[8],
-}
-return render(request, 'main/edit.html', context=data)
+        else:
+             data = {
+                'id': id,
+                'grid_0': Grid.objects.all()[0],
+                'grid_1': Grid.objects.all()[1],
+                'grid_2': Grid.objects.all()[2],
+                'grid_3': Grid.objects.all()[3],
+                'grid_4': Grid.objects.all()[4],
+                'grid_5': Grid.objects.all()[5],
+                'grid_6': Grid.objects.all()[6],
+                'grid_7': Grid.objects.all()[7],
+                'grid_8': Grid.objects.all()[8],
+                }
+        return render(request, 'main/edit.html', context=data)
 
 
 # =====================================================================================================================
