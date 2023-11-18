@@ -3,29 +3,38 @@ from .models import Grid
 from .forms import UserForms
 
 
-# список данных в grid
-def list(request):
-    grid = Grid.objects.all()
-    data = {"grid": grid}
-    return render(request, 'main/list.html', context=data)
-
-
-# изменение данных в бд + валидация данных
 def edit(request, id):
     grid = Grid.objects.get(id=id)
     if request.method == 'POST':
-        form = UserForms(request.POST)
-        if form.is_valid():
-            grid.item_0 = form.cleaned_data['item_0']
-            grid.item_1 = form.cleaned_data['item_1']
-            grid.item_2 = form.cleaned_data['item_2']
-            grid.item_3 = form.cleaned_data['item_3']
-            grid.item_4 = form.cleaned_data['item_4']
-            grid.item_5 = form.cleaned_data['item_5']
-            grid.item_6 = form.cleaned_data['item_6']
-            grid.item_7 = form.cleaned_data['item_7']
-            grid.item_8 = form.cleaned_data['item_8']
-            grid.save()
+        userform_0 = request.POST.get('item_0')
+        userform_1 = request.POST.get('item_1')
+        userform_2 = request.POST.get('item_2')
+        userform_3 = request.POST.get('item_3')
+        userform_4 = request.POST.get('item_4')
+        userform_5 = request.POST.get('item_5')
+        userform_6 = request.POST.get('item_6')
+        userform_7 = request.POST.get('item_7')
+        userform_8 = request.POST.get('item_8')
+
+        if len(userform_0) != 0:
+            grid.item_0 = userform_0
+        if len(userform_1) != 0:
+            grid.item_1 = userform_1
+        if len(userform_2) != 0:
+            grid.item_2 = userform_2
+        if len(userform_3) != 0:
+            grid.item_3 = userform_3
+        if len(userform_4) != 0:
+            grid.item_4 = userform_4
+        if len(userform_5) != 0:
+            grid.item_5 = userform_5
+        if len(userform_6) != 0:
+            grid.item_6 = userform_6
+        if len(userform_7) != 0:
+            grid.item_7 = userform_7
+        if len(userform_8) != 0:
+            grid.item_8 = userform_8
+        grid.save()
         return redirect('home')
     else:
         data = {
@@ -39,7 +48,7 @@ def edit(request, id):
             'grid_6': Grid.objects.all()[6],
             'grid_7': Grid.objects.all()[7],
             'grid_8': Grid.objects.all()[8],
-            }
+        }
         return render(request, 'main/edit.html', context=data)
 
 
@@ -57,3 +66,10 @@ def index(request):
         }
 
     return render(request, 'main/index.html', context=data)
+
+
+# список данных в grid
+def list(request):
+    grid = Grid.objects.all()
+    data = {"grid": grid}
+    return render(request, 'main/list.html', context=data)
