@@ -1,51 +1,54 @@
 
-def edit(request, id):
-        grid = Grid.objects.get(id=id)
-        if request.method == 'POST':
-                userform_0 = request.POST.get('item_0')
-                userform_1 = request.POST.get('item_1')
-                userform_2 = request.POST.get('item_2')
-                userform_3 = request.POST.get('item_3')
-                userform_4 = request.POST.get('item_4')
-                userform_5 = request.POST.get('item_5')
-                userform_6 = request.POST.get('item_6')
-                userform_7 = request.POST.get('item_7')
-                userform_8 = request.POST.get('item_8')
 
-                # if userform_0 == True:
-                grid.item_0 = userform_0
-                # if userform_1 == True:
-                grid.item_1 = userform_1
-                # if userform_2 == True:
-                grid.item_2 = userform_2
-                # if userform_3 == True:
-                grid.item_3 = userform_3
-                # if userform_4 == True:
-                grid.item_4 = userform_4
-                # if userform_5 == True:
-                grid.item_5 = userform_5
-                # if userform_6 == True:
-                grid.item_6 = userform_6
-                # if userform_7 == True:
-                grid.item_7 = userform_7
-                # if userform_8 == True:
-                grid.item_8 = userform_8
-        grid.save()
-        return redirect('home')
-        else:
-             data = {
-                'id': id,
-                'grid_0': Grid.objects.all()[0],
-                'grid_1': Grid.objects.all()[1],
-                'grid_2': Grid.objects.all()[2],
-                'grid_3': Grid.objects.all()[3],
-                'grid_4': Grid.objects.all()[4],
-                'grid_5': Grid.objects.all()[5],
-                'grid_6': Grid.objects.all()[6],
-                'grid_7': Grid.objects.all()[7],
-                'grid_8': Grid.objects.all()[8],
-                }
-        return render(request, 'main/edit.html', context=data)
+# =====================================================================================================================
+
+# def edit(request, id):
+#         grid = Grid.objects.get(id=id)
+#         if request.method == 'POST':
+#                 userform_0 = request.POST.get('item_0')
+#                 userform_1 = request.POST.get('item_1')
+#                 userform_2 = request.POST.get('item_2')
+#                 userform_3 = request.POST.get('item_3')
+#                 userform_4 = request.POST.get('item_4')
+#                 userform_5 = request.POST.get('item_5')
+#                 userform_6 = request.POST.get('item_6')
+#                 userform_7 = request.POST.get('item_7')
+#                 userform_8 = request.POST.get('item_8')
+#
+#                 # if userform_0 == True:
+#                 grid.item_0 = userform_0
+#                 # if userform_1 == True:
+#                 grid.item_1 = userform_1
+#                 # if userform_2 == True:
+#                 grid.item_2 = userform_2
+#                 # if userform_3 == True:
+#                 grid.item_3 = userform_3
+#                 # if userform_4 == True:
+#                 grid.item_4 = userform_4
+#                 # if userform_5 == True:
+#                 grid.item_5 = userform_5
+#                 # if userform_6 == True:
+#                 grid.item_6 = userform_6
+#                 # if userform_7 == True:
+#                 grid.item_7 = userform_7
+#                 # if userform_8 == True:
+#                 grid.item_8 = userform_8
+#         grid.save()
+#         return redirect('home')
+#         else:
+#              data = {
+#                 'id': id,
+#                 'grid_0': Grid.objects.all()[0],
+#                 'grid_1': Grid.objects.all()[1],
+#                 'grid_2': Grid.objects.all()[2],
+#                 'grid_3': Grid.objects.all()[3],
+#                 'grid_4': Grid.objects.all()[4],
+#                 'grid_5': Grid.objects.all()[5],
+#                 'grid_6': Grid.objects.all()[6],
+#                 'grid_7': Grid.objects.all()[7],
+#                 'grid_8': Grid.objects.all()[8],
+#                 }
+#         return render(request, 'main/edit.html', context=data)
 
 
 # =====================================================================================================================
