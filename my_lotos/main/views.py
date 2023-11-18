@@ -10,7 +10,7 @@ def list(request):
     return render(request, 'main/list.html', context=data)
 
 
-# изменение данных в бд
+# изменение данных в бд + валидация данных
 def edit(request, id):
     grid = Grid.objects.get(id=id)
     if request.method == 'POST':
